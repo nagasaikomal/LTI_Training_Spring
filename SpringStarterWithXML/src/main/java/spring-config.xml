@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	
+	 <bean id="student" class="com.lti.model.Student" scope="prototype">
+		<property name="rollNumber" value="1"></property>
+		<property name="studentName" value="Makarand"></property>
+		<property name="studentScore" value="60"></property>
+		<property name="address" ref="address"></property>
+	</bean> 
+	
+	<!--  <bean id="student" class="com.lti.model.Student" scope="prototype">
+	     <constructor-arg name="rollNumber" value="1"></constructor-arg>
+	     <constructor-arg name="studentName" value="MAKARAND"></constructor-arg>
+	     <constructor-arg name="studentScore" value="59"></constructor-arg>
+	</bean> -->
+	
+	<!-- <bean id="student" class="com.lti.model.Student" scope="prototype">
+	     <constructor-arg index="0" value="1"></constructor-arg>
+	     <constructor-arg index="1" value="MAKARAND"></constructor-arg>
+	     <constructor-arg index="2" value="59"></constructor-arg>
+	</bean> -->
+	
+	<bean id="address" class="com.lti.model.Address" scope="prototype">
+		<property name="addressId" value="10"></property>
+	    <property name="city" value="Mumbai"></property>
+	    <property name="pin" value="400706"></property>
+	</bean>
+	
+</beans>
